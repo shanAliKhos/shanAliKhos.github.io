@@ -12,9 +12,7 @@ body{font-family:-apple-system,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sa
 /* WebGL fluid cursor trails (mousemove color dye) */
 #fluid-wrap{position:fixed;top:0;left:0;z-index:0;pointer-events:none}
 #fluid{display:block;width:100vw;height:100vh}
-.topbar{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1100px;margin:0 auto}
-.promo{font-size:12.5px;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.05);color:#374151}
-.promo b{color:var(--ink)}
+.topbar{position:relative;z-index:5;display:flex;justify-content:flex-end;align-items:center;padding:18px 22px;max-width:1100px;margin:0 auto}
 .infoBtn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40px}
 /* HERO */
@@ -125,7 +123,6 @@ main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40
 <div id="fluid-wrap"><canvas id="fluid"></canvas></div>
 
 <div class="topbar">
-  <div class="promo">✦ Ask my <b>AI-style portfolio</b> anything — no message limits</div>
   <button class="infoBtn" onclick="openWelcome()" aria-label="About this portfolio">i</button>
 </div>
 
