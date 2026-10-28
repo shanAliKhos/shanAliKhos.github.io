@@ -3,6 +3,10 @@
 🌐 **Live site:** https://shanAliKhos.github.io/
 👤 **GitHub profile:** https://github.com/shanAliKhos
 💼 **Upwork:** https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c
+✉️ **Email:** shanalikhoso12@gmail.com
+💬 **WhatsApp / Phone:** +92 305 3170601 — https://wa.me/923053170601
+🔗 **LinkedIn:** https://www.linkedin.com/in/shan-ali-741986112/
+📘 **Facebook:** https://www.facebook.com/shanalikhosobaloch/
 
 Portfolio of **Shan Ali** — Laravel & NestJS SaaS Developer | APIs, Real-Time, Payments & AI.
 Based in Karachi, Pakistan · 100% Job Success and 5.0★ on Upwork · 10+ years of experience.
