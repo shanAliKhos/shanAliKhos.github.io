@@ -25,7 +25,10 @@ main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40
 .role{font-size:clamp(40px,7.4vw,64px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin:6px 0 4px}
 .role .grad{background:linear-gradient(90deg,#7c3aed,#db2777,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}
 .sub{color:var(--grey);font-size:16px;margin-top:8px}
-.avatarWrap{margin:22px auto 6px;width:172px;height:172px}
+.avatarWrap{margin:22px auto 6px;width:188px;height:208px;overflow:hidden;position:relative}
+.avatarWrap img,.avatarWrap video{width:100%;height:100%;object-fit:cover;object-position:center 18%;transform:scale(1.35) translateY(12%);display:block;pointer-events:none;user-select:none}
+.avatarRound{border-radius:50%;overflow:hidden;background:#eef2ff}
+.avatarRound img,.avatarRound video{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
 .pillsRow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
 .pillsRow span{background:var(--soft);border:1px solid var(--line);font-size:12.5px;padding:6px 12px;border-radius:999px;color:#374151}
 .socials{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0 2px}
@@ -48,7 +51,8 @@ main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40
 /* CHAT */
 #chat{display:none;padding-bottom:190px}
 .chatHead{text-align:center;padding:8px 0 18px}
-.chatHead .miniAv{width:56px;height:56px;margin:0 auto}
+.chatHead .miniAv{width:56px;height:56px;margin:0 auto;border-radius:50%;overflow:hidden;background:#eef2ff}
+.chatHead .miniAv img,.chatHead .miniAv video{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
 .msg{margin:14px 0;animation:fadeUp .45s ease both}
 .msg.user{display:flex;justify-content:flex-end}
 .bubble{background:var(--bluebubble);color:#fff;padding:11px 18px;border-radius:22px 22px 6px 22px;font-size:15.5px;max-width:80%;box-shadow:0 6px 16px rgba(47,107,255,.25)}
@@ -65,7 +69,8 @@ main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40
 .tags span{background:#111;color:#fff;font-size:12.5px;padding:6px 13px;border-radius:999px}
 .tags.light span{background:var(--soft);color:#374151;border:1px solid var(--line)}
 .profileHead{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
-.profileHead .phAv{width:92px;height:92px;flex:none}
+.profileHead .phAv{width:92px;height:92px;flex:none;border-radius:50%;overflow:hidden;background:#eef2ff}
+.profileHead .phAv img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
 .profileHead .nm{font-size:25px;font-weight:800;letter-spacing:-.5px}
 .profileHead .meta{color:var(--grey);font-size:13.5px;margin-top:2px}
 /* projects carousel */
@@ -195,17 +200,9 @@ main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40
 </div>
 
 <script>
-const AVATAR = `<svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="Cartoon avatar of Shan Ali">
-<circle cx="100" cy="100" r="98" fill="#eef2ff"/>
-<path d="M100 178c-26 0-44-10-52-24 6-14 26-24 52-24s46 10 52 24c-8 14-26 24-52 24z" fill="#2563eb"/>
-<path d="M62 168c4-20 18-30 38-30s34 10 38 30c-10 8-24 12-38 12s-28-4-38-12z" fill="#1d4ed8"/>
-<circle cx="100" cy="94" r="42" fill="#f2c49b"/>
-<path d="M58 92c-2-30 16-46 42-46s44 16 42 46c-1 8-4 12-6 12-1-16-6-26-14-32-14 4-30 2-42-6-8 8-12 18-14 36-2 0-5-4-8-10z" fill="#232323"/>
-<ellipse cx="84" cy="96" rx="4.6" ry="6" fill="#232323"/><ellipse cx="116" cy="96" rx="4.6" ry="6" fill="#232323"/>
-<path d="M76 84q8-4 15-1M109 83q7-3 15 1" stroke="#232323" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-<path d="M84 116q16 12 32 0" stroke="#b45309" stroke-width="4" fill="none" stroke-linecap="round"/>
-<path d="M64 132q36 16 72 0l-4 14q-32 12-64 0z" fill="#232323" opacity=".88"/>
-</svg>`;
+const AVATAR_HERO = `<img src="avatar-memoji.png" alt="Avatar" width="188" height="208" decoding="async">`;
+const AVATAR = `<img src="avatar-profile.png" alt="Avatar" width="92" height="92" decoding="async">`;
+const AVATAR_CHAT = `<video autoplay muted loop playsinline poster="avatar-profile.png" aria-label="Avatar"><source src="avatar-talk.webm" type="video/webm"><source src="avatar-talk.mp4" type="video/mp4"></video>`;
 
 const SHORTCUTS = [
  {key:'me', icon:'🙋', color:'#0d9488', label:'Me', q:'Tell me about yourself'},
@@ -244,8 +241,8 @@ const SKILLGROUPS = [
 ];
 
 function scHTML(s){return `<button class="sc" onclick="ask('${s.key}','${s.q.replace(/'/g,"\\'")}')"><span class="ic">${s.icon}</span><span class="lb">${s.label}</span></button>`}
-document.getElementById('heroAvatar').innerHTML = AVATAR;
-document.getElementById('chatAvatar').innerHTML = AVATAR;
+document.getElementById('heroAvatar').innerHTML = AVATAR_HERO;
+document.getElementById('chatAvatar').innerHTML = AVATAR_CHAT;
 document.getElementById('heroShortcuts').innerHTML = SHORTCUTS.map(scHTML).join('');
 document.getElementById('barShortcuts').innerHTML = SHORTCUTS.map(scHTML).join('');
 
