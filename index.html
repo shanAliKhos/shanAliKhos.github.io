@@ -3,105 +3,331 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shan Ali — Laravel & NestJS SaaS Developer | APIs, Real-Time, Payments & AI</title>
-<meta name="description" content="Shan Ali is a Laravel & NestJS SaaS Developer based in Karachi, Pakistan. He builds APIs, real-time platforms, payment systems and AI-powered products. 100% Job Success on Upwork.">
-<meta property="og:title" content="Shan Ali — Laravel & NestJS SaaS Developer">
-<meta property="og:description" content="APIs · Real-Time · Payments · AI — SaaS platforms built with Laravel & NestJS.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://shanAliKhos.github.io/">
+<title>Shan Ali — Laravel & NestJS SaaS Developer</title>
+<meta name="description" content="Portfolio of Shan Ali — Laravel & NestJS SaaS Developer | APIs, Real-Time, Payments & AI. Based in Karachi, Pakistan. 100% Job Success on Upwork.">
 <style>
-:root{--bg:#0b0f19;--panel:#121826;--panel2:#171f33;--text:#eef2ff;--muted:#a7b0c6;--accent:#6ee7a0;--accent2:#60a5fa;--line:#232c47;--radius:18px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-nav{position:sticky;top:0;z-index:10;background:rgba(11,15,25,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navin{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-.logo{font-weight:800;font-size:20px}.logo span{color:var(--accent)}
-.links{display:flex;gap:22px;color:var(--muted);font-size:15px}.links a:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#062314;font-weight:700;padding:12px 20px;border-radius:999px;border:0;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-.hero{padding:84px 0 64px;background:radial-gradient(900px 420px at 15% -10%,rgba(96,165,250,.28),transparent 60%),radial-gradient(800px 400px at 90% 0%,rgba(110,231,160,.18),transparent 55%)}
-.badge{display:inline-block;border:1px solid var(--line);background:var(--panel);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:18px}
-h1{font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.03em;max-width:820px}
-h1 em{font-style:normal;color:var(--accent)}
-.lead{color:var(--muted);font-size:19px;max-width:720px;margin:22px 0 30px}
-.cta{display:flex;gap:14px;flex-wrap:wrap}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-.stat b{font-size:26px;display:block}.stat span{color:var(--muted);font-size:14px}
-section{padding:64px 0}
-h2{font-size:32px;letter-spacing:-.02em;margin-bottom:10px}
-.sub{color:var(--muted);max-width:700px;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.card:hover{border-color:#35507a;transform:translateY(-2px);transition:.2s}
-.card h3{font-size:18px;margin-bottom:8px}.card p{color:var(--muted);font-size:15px}
-.tag{display:inline-block;font-size:12px;color:#c7d2fe;background:var(--panel2);border:1px solid var(--line);padding:4px 9px;border-radius:999px;margin:10px 6px 0 0}
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{padding:9px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14px}
-.timeline{display:grid;gap:16px}
-.job{display:grid;grid-template-columns:210px 1fr;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.job time{color:var(--accent);font-weight:700}.job p{color:var(--muted)}
-.contact{background:linear-gradient(135deg,#12241c,#101a33);border:1px solid var(--line);border-radius:24px;padding:34px;text-align:center}
-footer{padding:30px 0 44px;color:var(--muted);border-top:1px solid var(--line);font-size:14px}
-@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.links{display:none}.job{grid-template-columns:1fr}}
-@media(max-width:540px){.grid{grid-template-columns:1fr}}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#111;--grey:#6b7280;--line:#e5e7eb;--soft:#f3f4f6;--blue:#2563eb;--bluebubble:#2f6bff}
+body{font-family:-apple-system,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;min-height:100vh;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;pointer-events:none}
+.blob.b1{width:420px;height:420px;background:#e9d5ff;top:-120px;left:-100px;animation:drift 16s ease-in-out infinite alternate}
+.blob.b2{width:380px;height:380px;background:#fbcfe8;bottom:-140px;right:-80px;animation:drift 20s ease-in-out infinite alternate-reverse}
+.blob.b3{width:260px;height:260px;background:#dbeafe;top:40%;left:60%;animation:drift 24s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.15)}}
+.topbar{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1100px;margin:0 auto}
+.promo{font-size:12.5px;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.05);color:#374151}
+.promo b{color:var(--ink)}
+.infoBtn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 40px}
+/* HERO */
+#hero{text-align:center;padding-top:26px;animation:fadeUp .8s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.monogram{width:58px;height:58px;margin:0 auto 22px;background:#111;color:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:21px;letter-spacing:.5px;box-shadow:0 10px 24px rgba(0,0,0,.18);cursor:pointer;border:3px solid #fff}
+.greet{font-size:clamp(20px,3.4vw,27px);font-weight:500;color:#1f2937}
+.role{font-size:clamp(40px,7.4vw,64px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin:6px 0 4px}
+.role .grad{background:linear-gradient(90deg,#7c3aed,#db2777,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--grey);font-size:16px;margin-top:8px}
+.avatarWrap{margin:22px auto 6px;width:172px;height:172px}
+.pillsRow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
+.pillsRow span{background:var(--soft);border:1px solid var(--line);font-size:12.5px;padding:6px 12px;border-radius:999px;color:#374151}
+/* ASK BAR */
+.askBar{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:0 12px 32px rgba(0,0,0,.09);max-width:620px;margin:26px auto 0}
+.askBar input{flex:1;border:none;outline:none;font-size:16px;background:transparent;color:var(--ink);min-width:0}
+.sendBtn{flex:none;width:44px;height:44px;border-radius:50%;border:none;background:var(--blue);color:#fff;font-size:19px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,background .15s}
+.sendBtn:hover{background:#1d4ed8;transform:scale(1.06)}
+/* SHORTCUTS */
+.shortcuts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px auto 0;max-width:640px}
+.sc{width:104px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 6px 12px;cursor:pointer;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s;font-family:inherit}
+.sc:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.09)}
+.sc .ic{font-size:21px;display:block;margin-bottom:6px}
+.sc .lb{font-size:13.5px;font-weight:600}
+.watermark{position:relative;z-index:1;text-align:center;font-weight:800;font-size:clamp(90px,19vw,190px);letter-spacing:-4px;color:#f6f6f8;line-height:.9;user-select:none;pointer-events:none;margin-top:34px;white-space:nowrap;overflow:hidden}
+/* CHAT */
+#chat{display:none;padding-bottom:190px}
+.chatHead{text-align:center;padding:8px 0 18px}
+.chatHead .miniAv{width:56px;height:56px;margin:0 auto}
+.msg{margin:14px 0;animation:fadeUp .45s ease both}
+.msg.user{display:flex;justify-content:flex-end}
+.bubble{background:var(--bluebubble);color:#fff;padding:11px 18px;border-radius:22px 22px 6px 22px;font-size:15.5px;max-width:80%;box-shadow:0 6px 16px rgba(47,107,255,.25)}
+.answer{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.answer h2{font-size:27px;font-weight:800;letter-spacing:-.6px;margin-bottom:12px}
+.answer h3{font-size:16.5px;font-weight:700;margin:20px 0 8px}
+.answer p{color:#374151;font-size:15.5px;line-height:1.65;margin-bottom:10px}
+.answer ul{color:#374151;font-size:15.5px;line-height:1.7;padding-left:19px;margin-bottom:8px}
+.typing{display:inline-flex;gap:5px;padding:14px 18px;background:var(--soft);border-radius:20px}
+.typing i{width:8px;height:8px;border-radius:50%;background:#9ca3af;animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+@keyframes blink{0%,80%,100%{opacity:.3}40%{opacity:1}}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+.tags span{background:#111;color:#fff;font-size:12.5px;padding:6px 13px;border-radius:999px}
+.tags.light span{background:var(--soft);color:#374151;border:1px solid var(--line)}
+.profileHead{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.profileHead .phAv{width:92px;height:92px;flex:none}
+.profileHead .nm{font-size:25px;font-weight:800;letter-spacing:-.5px}
+.profileHead .meta{color:var(--grey);font-size:13.5px;margin-top:2px}
+/* projects carousel */
+.carWrap{overflow:hidden;margin:6px -4px 0}
+.car{display:flex;gap:14px;transition:transform .45s cubic-bezier(.22,.8,.3,1);padding:4px}
+.pcard{flex:0 0 218px;height:300px;border-radius:22px;padding:18px;color:#fff;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 26px rgba(0,0,0,.16);transition:transform .18s}
+.pcard:hover{transform:translateY(-4px)}
+.pcard .cat{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;opacity:.85}
+.pcard .ttl{font-size:21px;font-weight:800;line-height:1.15;margin-top:7px}
+.pcard .emo{font-size:64px;margin-top:auto;text-align:center;filter:drop-shadow(0 8px 14px rgba(0,0,0,.25))}
+.pcard .tap{font-size:11.5px;opacity:.85;text-align:center;margin-top:8px}
+.carNav{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.carNav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:16px;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.carNav button:hover{background:var(--soft)}
+/* services / general cards */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:18px;padding:17px;background:#fff}
+.card .ct{font-weight:700;font-size:15.5px;margin-bottom:5px}
+.card .cd{color:var(--grey);font-size:13.5px;line-height:1.55}
+.card .pr{font-weight:800;margin-top:9px;font-size:15px}
+.stars{color:#f59e0b;letter-spacing:2px;font-size:14px}
+.linkRow{display:flex;justify-content:space-between;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:9px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+.linkRow:hover{background:#e9ebef}
+.linkRow .arr{color:var(--grey)}
+/* bottom bar */
+#bottomBar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:20;background:linear-gradient(transparent,#fff 26%);padding:22px 16px 12px}
+#bottomBar .inner{max-width:680px;margin:0 auto}
+#bottomBar .sc{width:88px;padding:10px 4px 9px}
+#bottomBar .sc .ic{font-size:17px;margin-bottom:3px}
+#bottomBar .sc .lb{font-size:12px}
+#bottomBar .shortcuts{margin:0 auto 10px}
+.credit{text-align:center;color:#9ca3af;font-size:12px;margin-top:9px}
+/* modal */
+.modalBk{display:none;position:fixed;inset:0;background:rgba(15,15,20,.55);z-index:50;align-items:flex-start;justify-content:center;overflow-y:auto;padding:34px 16px}
+.modal{background:#fff;border-radius:26px;max-width:640px;width:100%;padding:32px 30px;position:relative;animation:fadeUp .3s ease both}
+.modal .x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;background:#111;color:#fff;border:none;font-size:16px;cursor:pointer}
+.modal .cat{font-size:11.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--grey)}
+.modal h2{font-size:31px;font-weight:800;letter-spacing:-.7px;margin:8px 0 14px;line-height:1.12}
+.modal .panel{background:var(--soft);border-radius:18px;padding:20px}
+.modal .panel p{color:#374151;font-size:15.5px;line-height:1.65}
+.modal .techLab{font-size:11.5px;font-weight:700;letter-spacing:1.6px;color:var(--grey);margin:16px 0 8px}
+.homeLink{display:inline-block;margin-top:14px;color:var(--blue);font-weight:600;cursor:pointer;background:none;border:none;font-size:14.5px;font-family:inherit}
 </style>
 </head>
 <body>
-<nav><div class="wrap navin"><a class="logo" href="#">Shan<span>Ali</span>.</a><div class="links"><a href="#projects">Projects</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div><a class="btn" href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c" target="_blank" rel="noopener">Hire me on Upwork</a></div></nav>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 
-<header class="hero"><div class="wrap">
-<div class="badge">● Available for work · Karachi, Pakistan · 100% Job Success on Upwork</div>
-<h1>Laravel &amp; NestJS SaaS Developer — <em>APIs, Real-Time, Payments &amp; AI</em></h1>
-<p class="lead">I build and rescue production SaaS platforms: multi-tenant systems, fast APIs, live tracking and WebSocket features, Stripe &amp; crypto payments, and AI-powered calling and automation — with 5-star delivery on Upwork.</p>
-<div class="cta"><a class="btn" href="#projects">View my projects ↓</a><a class="btn ghost" href="https://github.com/shanAliKhos" target="_blank" rel="noopener">GitHub ↗</a><a class="btn ghost" href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c" target="_blank" rel="noopener">Upwork ↗</a></div>
-<div class="stats">
-<div class="stat"><b>10+ years</b><span>Experience since 2016</span></div>
-<div class="stat"><b>100%</b><span>Job Success on Upwork</span></div>
-<div class="stat"><b>5.0 ★</b><span>Client reviews on Upwork</span></div>
-<div class="stat"><b>100+</b><span>Projects at Trecsol</span></div>
-</div></div></header>
+<div class="topbar">
+  <div class="promo">✦ Ask my <b>AI-style portfolio</b> anything — no message limits</div>
+  <button class="infoBtn" onclick="openWelcome()" aria-label="About this portfolio">i</button>
+</div>
 
-<section id="projects"><div class="wrap"><h2>Selected projects</h2><p class="sub">Real products from my Upwork portfolio — SaaS, real-time, payments, AI and commerce.</p>
-<div class="grid">
-<article class="card"><h3>Laravel Multi-Tenant SaaS</h3><p>Multi-tenant SaaS platform built with Laravel — tenant isolation, subscriptions and scalable backend architecture.</p><span class="tag">Laravel</span><span class="tag">SaaS</span><span class="tag">MySQL</span></article>
-<article class="card"><h3>Food Chain App</h3><p>Food delivery / food chain platform with ordering flows and real-time status — also offered as a full delivery platform service.</p><span class="tag">Laravel</span><span class="tag">Real-Time</span><span class="tag">Payments</span></article>
-<article class="card"><h3>FastAPI AI Calling Agent</h3><p>AI calling agent built with FastAPI and Python — automated calls powered by AI for business workflows.</p><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">AI</span></article>
-<article class="card"><h3>NestJS WebSocket Game Platform</h3><p>Real-time multiplayer game platform with WebSocket gameplay and crypto payments.</p><span class="tag">NestJS</span><span class="tag">WebSockets</span><span class="tag">Crypto</span></article>
-<article class="card"><h3>On-Chain Payment Listener</h3><p>NestJS + Next.js system listening to on-chain events to confirm and process Web3 payments reliably.</p><span class="tag">NestJS</span><span class="tag">Next.js</span><span class="tag">Web3</span></article>
-<article class="card"><h3>Brix — Construction SaaS</h3><p>SaaS platform for construction workflows, built for teams managing projects and operations online.</p><span class="tag">Laravel</span><span class="tag">SaaS</span></article>
-<article class="card"><h3>AIWA ERP System</h3><p>ERP covering core business operations — finance, HR &amp; payroll and memberships in one admin system.</p><span class="tag">Laravel</span><span class="tag">ERP</span><span class="tag">CRM</span></article>
-<article class="card"><h3>Almaymaar Investment Platform</h3><p>Investment platform with investor / member management and ledger-style admin workflows.</p><span class="tag">Laravel</span><span class="tag">Finance</span></article>
-<article class="card"><h3>Ecommerce + CMS</h3><p>Custom ecommerce with a full CMS admin — products, orders and pages managed from one dashboard.</p><span class="tag">Laravel</span><span class="tag">Ecommerce</span><span class="tag">CMS</span></article>
-<article class="card"><h3>React Native Apps</h3><p>Cross-platform mobile apps connected to Laravel / NestJS backends and live APIs.</p><span class="tag">React Native</span><span class="tag">Mobile</span><span class="tag">APIs</span></article>
-</div></div></section>
+<main>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="monogram" onclick="ask('me','Tell me about yourself')">SA</div>
+    <div class="greet">Hey, I'm Shan Ali 👋</div>
+    <div class="role">Laravel &amp; NestJS<br><span class="grad">SaaS Developer</span></div>
+    <div class="sub">APIs · Real-Time · Payments &amp; AI — Karachi, Pakistan 🇵🇰</div>
+    <div class="avatarWrap" id="heroAvatar"></div>
+    <div class="pillsRow">
+      <span>⭐ 100% Job Success on Upwork</span><span>🏆 5.0★ client reviews</span><span>💼 Open for work · 30+ hrs/week</span>
+    </div>
+    <form class="askBar" onsubmit="return submitAsk(event,'heroInput')">
+      <input id="heroInput" type="text" placeholder="Ask me anything…" autocomplete="off">
+      <button class="sendBtn" type="submit" aria-label="Send">↑</button>
+    </form>
+    <div class="shortcuts" id="heroShortcuts"></div>
+    <div class="watermark">SHAN&nbsp;ALI</div>
+  </section>
 
-<section id="services" style="background:#0e1424"><div class="wrap"><h2>Services</h2><p class="sub">Fixed-scope services from my Upwork Project Catalog — clear deliverables, no surprises.</p>
-<div class="grid">
-<article class="card"><h3>Production-Ready API</h3><p>Laravel / NestJS / Python API built properly — auth, docs, performance and deployment-ready.</p><span class="tag">From $350</span><span class="tag">5 days</span></article>
-<article class="card"><h3>Real-Time WebSocket Updates</h3><p>Live tracking, chat, notifications and real-time status added to your existing product.</p><span class="tag">From $400</span><span class="tag">5 days</span></article>
-<article class="card"><h3>Laravel Bug Fix &amp; Rescue</h3><p>Broken feature, 500 error or slow checkout? I diagnose and fix production Laravel / NestJS issues.</p><span class="tag">From $150</span><span class="tag">2 days</span></article>
-<article class="card"><h3>Food Delivery Platform</h3><p>Complete food delivery platform — customer, restaurant and admin flows with payments.</p><span class="tag">From $1,500</span></article>
-<article class="card"><h3>Real-Time Game Platform</h3><p>Multiplayer game platform with real-time play and crypto payments.</p><span class="tag">From $1,200</span></article>
-<article class="card"><h3>Custom SaaS Build</h3><p>Have a SaaS idea? I design the backend, APIs and real-time features and ship the MVP.</p><span class="tag">Let's talk</span></article>
-</div></div></section>
+  <!-- CHAT -->
+  <section id="chat">
+    <div class="chatHead"><div class="miniAv" id="chatAvatar"></div>
+    <button class="homeLink" onclick="goHome()">← Back to home</button></div>
+    <div id="messages"></div>
+  </section>
+</main>
 
-<section id="experience"><div class="wrap"><h2>Experience</h2><p class="sub">A decade of shipping — from intern to lead developer.</p>
-<div class="timeline">
-<div class="job"><time>2021 — Present</time><div><h3>Lead Laravel &amp; NestJS Developer — Trecsol</h3><p>Lead development and deployment on AWS, Heroku and VPS across 100+ projects. Real-time WebSockets, ERPs, CRMs and e-commerce in Laravel and Vue.</p></div></div>
-<div class="job"><time>2018 — 2020</time><div><h3>Laravel Developer — Online Media Circle</h3><p>Led a 4-person team building travel portals and travel API integrations in Laravel and Vue.</p></div></div>
-<div class="job"><time>2016 — 2018</time><div><h3>Junior Web Developer — Supersoftz Technologies</h3><p>Progressed from intern to developer — Laravel / Vue foundations and real-time features.</p></div></div>
-</div></div></section>
+<!-- BOTTOM BAR (chat view) -->
+<div id="bottomBar">
+  <div class="inner">
+    <div class="shortcuts" id="barShortcuts"></div>
+    <form class="askBar" style="margin-top:0" onsubmit="return submitAsk(event,'barInput')">
+      <input id="barInput" type="text" placeholder="Ask me anything…" autocomplete="off">
+      <button class="sendBtn" type="submit" aria-label="Send">↑</button>
+    </form>
+    <div class="credit">Portfolio of Shan Ali · Karachi, Pakistan</div>
+  </div>
+</div>
 
-<section id="skills" style="background:#0e1424"><div class="wrap"><h2>Skills</h2><p class="sub">Backend-first, full-stack capable.</p>
-<div class="skills"><span class="skill">Laravel</span><span class="skill">PHP</span><span class="skill">Full-Stack Development</span><span class="skill">NestJS</span><span class="skill">React Native</span><span class="skill">Mobile App Development</span><span class="skill">Next.js</span><span class="skill">Node.js</span><span class="skill">TypeScript</span><span class="skill">Flutter</span><span class="skill">SaaS Development</span><span class="skill">Firebase</span><span class="skill">React</span><span class="skill">Python</span><span class="skill">API Development</span><span class="skill">MySQL</span><span class="skill">PostgreSQL</span><span class="skill">iOS Development</span><span class="skill">Android App Development</span><span class="skill">Django</span><span class="skill">Detail Oriented</span><span class="skill">FastAPI</span><span class="skill">Vue.js</span><span class="skill">REST APIs</span><span class="skill">WebSockets</span><span class="skill">Real-Time Systems</span><span class="skill">Stripe &amp; Payments</span><span class="skill">Web3 / On-Chain</span><span class="skill">AI Integrations</span><span class="skill">Redis</span><span class="skill">AWS</span><span class="skill">Multi-Tenant SaaS</span></div>
-</div></section>
+<!-- PROJECT MODAL -->
+<div class="modalBk" id="projModalBk" onclick="if(event.target===this)closeModal('projModalBk')">
+  <div class="modal" id="projModal"></div>
+</div>
 
-<section id="contact"><div class="wrap"><div class="contact"><h2>Let's build your platform</h2><p class="sub" style="margin:10px auto 24px">Open for work — more than 30 hrs/week, open to contract-to-hire, usually replies within 0–4 hours.</p><div class="cta" style="justify-content:center"><a class="btn" href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c" target="_blank" rel="noopener">Message me on Upwork</a><a class="btn ghost" href="mailto:shanalikhoso12@gmail.com">shanalikhoso12@gmail.com</a></div></div></div></section>
+<!-- WELCOME MODAL -->
+<div class="modalBk" id="welcomeBk" onclick="if(event.target===this)closeModal('welcomeBk')">
+  <div class="modal">
+    <button class="x" onclick="closeModal('welcomeBk')">✕</button>
+    <div class="cat">Welcome</div>
+    <h2>Welcome to my AI-style portfolio</h2>
+    <div class="panel">
+      <p><b>How it works</b><br>Instead of scrolling a long page, just ask. Tap Me, Projects, Skills, Services or Contact — or type your own question — and I'll answer with my real work, skills and prices.</p>
+      <p style="margin-top:12px"><b>Want to hire me?</b><br>I'm open for work (30+ hrs/week, open to contract-to-hire) and usually reply within a few hours.</p>
+    </div>
+    <button class="sendBtn" style="width:auto;border-radius:999px;padding:0 26px;height:46px;font-size:15px;margin-top:20px" onclick="closeModal('welcomeBk');ask('contact','How can I contact you?')">Contact me →</button>
+  </div>
+</div>
 
-<footer><div class="wrap">© 2026 Shan Ali · Karachi, Pakistan · <a href="https://github.com/shanAliKhos">GitHub</a> · <a href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c">Upwork</a> · Built with GitHub Pages</div></footer>
+<script>
+const AVATAR = `<svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="Cartoon avatar of Shan Ali">
+<circle cx="100" cy="100" r="98" fill="#eef2ff"/>
+<path d="M100 178c-26 0-44-10-52-24 6-14 26-24 52-24s46 10 52 24c-8 14-26 24-52 24z" fill="#2563eb"/>
+<path d="M62 168c4-20 18-30 38-30s34 10 38 30c-10 8-24 12-38 12s-28-4-38-12z" fill="#1d4ed8"/>
+<circle cx="100" cy="94" r="42" fill="#f2c49b"/>
+<path d="M58 92c-2-30 16-46 42-46s44 16 42 46c-1 8-4 12-6 12-1-16-6-26-14-32-14 4-30 2-42-6-8 8-12 18-14 36-2 0-5-4-8-10z" fill="#232323"/>
+<ellipse cx="84" cy="96" rx="4.6" ry="6" fill="#232323"/><ellipse cx="116" cy="96" rx="4.6" ry="6" fill="#232323"/>
+<path d="M76 84q8-4 15-1M109 83q7-3 15 1" stroke="#232323" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+<path d="M84 116q16 12 32 0" stroke="#b45309" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M64 132q36 16 72 0l-4 14q-32 12-64 0z" fill="#232323" opacity=".88"/>
+</svg>`;
+
+const SHORTCUTS = [
+ {key:'me', icon:'🙋', color:'#0d9488', label:'Me', q:'Tell me about yourself'},
+ {key:'projects', icon:'🚀', color:'#16a34a', label:'Projects', q:'Show me your projects'},
+ {key:'skills', icon:'🛠️', color:'#7c3aed', label:'Skills', q:'What are your skills?'},
+ {key:'services', icon:'💼', color:'#db2777', label:'Services', q:'What services do you offer?'},
+ {key:'contact', icon:'✉️', color:'#d97706', label:'Contact', q:'How can I contact you?'}
+];
+
+const PROJECTS = [
+ {cat:'SaaS Platform', ttl:'Laravel Multi-Tenant SaaS', emo:'🏢', grad:'linear-gradient(160deg,#7c3aed,#4f46e5)', desc:'Multi-tenant SaaS platform with tenant isolation, subscriptions and a scalable Laravel backend — the kind of foundation growing products are built on.', tech:['Laravel','PHP','MySQL','Multi-Tenant','Subscriptions']},
+ {cat:'Food Delivery', ttl:'Food Chain App', emo:'🍔', grad:'linear-gradient(160deg,#ea580c,#dc2626)', desc:'Food delivery platform with smooth ordering flows and real-time order status, from menu to doorstep tracking.', tech:['Laravel','Real-Time Tracking','Payments','APIs']},
+ {cat:'AI Product', ttl:'FastAPI AI Calling Agent', emo:'🤖', grad:'linear-gradient(160deg,#0891b2,#2563eb)', desc:'AI-powered automated calling agent built with FastAPI and Python — outbound calls, conversations and automation handled by AI.', tech:['FastAPI','Python','AI','Automation']},
+ {cat:'Real-Time Gaming', ttl:'NestJS WebSocket Game Platform', emo:'🎮', grad:'linear-gradient(160deg,#16a34a,#065f46)', desc:'Real-time multiplayer game platform powered by NestJS and WebSockets, with crypto payments for in-game transactions.', tech:['NestJS','WebSockets','TypeScript','Crypto Payments']},
+ {cat:'Web3 / Payments', ttl:'On-Chain Payment Listener', emo:'⛓️', grad:'linear-gradient(160deg,#334155,#0f172a)', desc:'NestJS + Next.js system that listens to on-chain events and processes Web3 payments reliably and automatically.', tech:['NestJS','Next.js','Web3','TypeScript']},
+ {cat:'Construction SaaS', ttl:'Brix — Construction SaaS', emo:'🏗️', grad:'linear-gradient(160deg,#d97706,#b45309)', desc:'SaaS platform for construction teams — project and team workflows organised in one place.', tech:['Laravel','SaaS','Team Workflows']},
+ {cat:'ERP System', ttl:'AIWA ERP System', emo:'📊', grad:'linear-gradient(160deg,#0d9488,#0f766e)', desc:'ERP covering finance, HR & payroll and memberships — core business operations in a single system.', tech:['Laravel','ERP','Finance','HR & Payroll']},
+ {cat:'Fintech', ttl:'Almaymaar', emo:'💹', grad:'linear-gradient(160deg,#1e40af,#7c3aed)', desc:'Investment platform with investor/member areas and a full ledger admin for tracking investments.', tech:['Laravel','Investments','Ledger Admin']},
+ {cat:'Ecommerce', ttl:'Ecommerce + CMS', emo:'🛒', grad:'linear-gradient(160deg,#db2777,#9d174d)', desc:'Custom ecommerce store with a complete CMS admin — products, orders and pages managed from one dashboard.', tech:['Laravel','Ecommerce','CMS Admin']},
+ {cat:'Mobile Apps', ttl:'React Native Apps', emo:'📱', grad:'linear-gradient(160deg,#0284c7,#0e7490)', desc:'Cross-platform mobile apps connected to Laravel / NestJS backends and live APIs.', tech:['React Native','Laravel','NestJS','REST APIs']}
+];
+
+const SERVICES = [
+ {t:'Production-Ready API', d:'Laravel / NestJS / Python APIs built for production — auth, docs, performance.', p:'from $350'},
+ {t:'Real-Time WebSocket Updates', d:'Live tracking, chat and notifications with WebSockets.', p:'from $400'},
+ {t:'Laravel Bug Fix & Rescue', d:'Production issues found and fixed fast — most scoped fixes in ~2 days.', p:'from $150'},
+ {t:'Food Delivery Platform', d:'Complete food delivery build — ordering, tracking, payments.', p:'from $1,500'},
+ {t:'Real-Time Game Platform', d:'Multiplayer games with crypto payments.', p:'from $1,200'}
+];
+
+const SKILLGROUPS = [
+ {h:'⚙️ Backend', items:['Laravel','NestJS','PHP','Node.js','TypeScript','Python','Django','FastAPI','API Development']},
+ {h:'🎨 Frontend & Mobile', items:['React','Next.js','React Native','Flutter','Mobile App Development','iOS Development','Android App Development','Full-Stack Development']},
+ {h:'⚡ Real-Time, Payments & AI', items:['WebSockets','Real-Time Systems','Stripe & Payments','Web3 / On-Chain','AI Integrations','SaaS Development']},
+ {h:'🗄️ Data & Cloud', items:['MySQL','PostgreSQL','Firebase','Redis','AWS','Multi-Tenant SaaS','Detail Oriented']}
+];
+
+function scHTML(s){return `<button class="sc" onclick="ask('${s.key}','${s.q.replace(/'/g,"\\'")}')"><span class="ic">${s.icon}</span><span class="lb">${s.label}</span></button>`}
+document.getElementById('heroAvatar').innerHTML = AVATAR;
+document.getElementById('chatAvatar').innerHTML = AVATAR;
+document.getElementById('heroShortcuts').innerHTML = SHORTCUTS.map(scHTML).join('');
+document.getElementById('barShortcuts').innerHTML = SHORTCUTS.map(scHTML).join('');
+
+function answerMe(){return `<div class="answer">
+ <div class="profileHead"><div class="phAv">${AVATAR}</div><div><div class="nm">Shan Ali</div><div class="meta">Karachi, Pakistan · 10+ years of experience</div>
+ <div class="tags light" style="margin-top:9px"><span>🏆 100% Job Success</span><span>⭐ 5.0 on Upwork</span><span>Lead Developer @ Trecsol</span><span>💼 Open for work</span></div></div></div>
+ <p>I build and rescue production SaaS platforms with <b>Laravel</b> and <b>NestJS</b> — multi-tenant systems, fast APIs, live tracking and WebSocket features, Stripe &amp; crypto payments, and AI-powered calling and automation.</p>
+ <h3>📈 Experience</h3>
+ <ul><li><b>2021 — Present:</b> Lead Laravel &amp; NestJS Developer — Trecsol (100+ projects delivered)</li>
+ <li><b>2018 — 2020:</b> Laravel Developer — Online Media Circle (led a 4-person team, travel portals &amp; API integrations)</li>
+ <li><b>2016 — 2018:</b> Junior Web Developer — Supersoftz Technologies (started as intern)</li></ul>
+ <h3>🔄 How I work</h3>
+ <p><b>Discuss → Plan → Build → Launch &amp; support.</b> We agree the scope first, I build in visible steps, and I stay available after launch.</p></div>`}
+
+function answerProjects(){const cards = PROJECTS.map((p,i)=>`<div class="pcard" style="background:${p.grad}" onclick="openProject(${i})"><div class="cat">${p.cat}</div><div class="ttl">${p.ttl}</div><div class="emo">${p.emo}</div><div class="tap">Tap for details</div></div>`).join('');
+ return `<div class="answer"><h2>My Projects</h2><p>10 selected projects — real platforms I've designed, built or rescued. Tap any card for details.</p>
+ <div class="carWrap"><div class="car" id="projCar">${cards}</div></div>
+ <div class="carNav"><button onclick="slideCar(-1)" aria-label="Previous projects">←</button><button onclick="slideCar(1)" aria-label="Next projects">→</button></div></div>`}
+
+function answerSkills(){return `<div class="answer"><h2>Skills &amp; Expertise</h2><p>All 21 skills from my Upwork profile, plus the specialities clients hire me for most:</p>` +
+ SKILLGROUPS.map(g=>`<h3>${g.h}</h3><div class="tags">${g.items.map(i=>`<span>${i}</span>`).join('')}</div>`).join('') + `</div>`}
+
+function answerServices(){return `<div class="answer"><h2>Services &amp; Prices</h2><p>Fixed starting prices — final quote depends on scope, agreed before we start.</p>
+ <div class="cards">${SERVICES.map(s=>`<div class="card"><div class="ct">${s.t}</div><div class="cd">${s.d}</div><div class="pr">${s.p}</div></div>`).join('')}</div>
+ <h3>⭐ Client feedback</h3>
+ <div class="cards">
+ <div class="card"><div class="stars">★★★★★</div><div class="ct" style="margin-top:5px">NestJS bug fix</div><div class="cd">Production 500 error diagnosed and fixed — rated 5.0 on Upwork.</div><div class="pr">$50 project</div></div>
+ <div class="card"><div class="stars">★★★★★</div><div class="ct" style="margin-top:5px">Laravel checkout change</div><div class="cd">Checkout flow updated exactly as requested — rated 5.0 on Upwork.</div><div class="pr">$30 project</div></div>
+ </div>
+ <p style="margin-top:12px">Full reviews: <a href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">my Upwork profile</a></p>
+ <h3>❓ Quick answers</h3>
+ <ul><li><b>Availability:</b> 30+ hrs/week, open to contract-to-hire</li>
+ <li><b>Reply time:</b> usually within a few hours (0–4 hrs)</li>
+ <li><b>Timezone:</b> Karachi, Pakistan (UTC+5)</li>
+ <li><b>Bug fixes:</b> most scoped fixes in ~2 days</li></ul></div>`}
+
+function answerContact(){return `<div class="answer"><h2>Let's Work Together</h2>
+ <p>I'm open for work and usually reply within a few hours. The fastest ways to reach me:</p>
+ <a class="linkRow" href="mailto:shanalikhoso12@gmail.com"><span>✉️ shanalikhoso12@gmail.com</span><span class="arr">→</span></a>
+ <a class="linkRow" href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c" target="_blank" rel="noopener"><span>💼 Hire me on Upwork</span><span class="arr">→</span></a>
+ <a class="linkRow" href="https://github.com/shanAliKhos" target="_blank" rel="noopener"><span>🐙 GitHub — shanAliKhos</span><span class="arr">→</span></a>
+ <a class="linkRow" href="https://twitter.com/Shanalikhoso12" target="_blank" rel="noopener"><span>𝕏 X / Twitter — @Shanalikhoso12</span><span class="arr">→</span></a>
+ <p style="margin-top:14px">📍 Karachi, Pakistan (UTC+5) · Available 30+ hrs/week</p></div>`}
+
+function fallbackAnswer(){return `<div class="answer"><h2>Good question!</h2><p>Here's what I can tell you about in detail — tap one:</p>
+ <div class="tags light"><span onclick="ask('me','Tell me about yourself')" style="cursor:pointer">🙋 About me</span><span onclick="ask('projects','Show me your projects')" style="cursor:pointer">🚀 Projects</span><span onclick="ask('skills','What are your skills?')" style="cursor:pointer">🛠️ Skills</span><span onclick="ask('services','What services do you offer?')" style="cursor:pointer">💼 Services &amp; prices</span><span onclick="ask('contact','How can I contact you?')" style="cursor:pointer">✉️ Contact</span></div>
+ <p>Or ask me about prices, experience, availability or a specific project — e.g. "What does an API cost?"</p></div>`}
+
+const ANSWERS = {me:answerMe, projects:answerProjects, skills:answerSkills, services:answerServices, contact:answerContact};
+
+function route(text){
+ const t = text.toLowerCase();
+ if(/contact|email|reach|hire|talk|touch/.test(t)) return 'contact';
+ if(/project|work|portfolio|built|app|platform/.test(t)) return 'projects';
+ if(/skill|stack|tech|language|framework|know|expert/.test(t)) return 'skills';
+ if(/service|price|cost|charge|rate|offer|much/.test(t)) return 'services';
+ if(/about|who|yourself|experience|background|me\b/.test(t)) return 'me';
+ return null;
+}
+
+let carPos = 0;
+function slideCar(dir){const car=document.getElementById('projCar'); if(!car) return; const max=Math.max(0, PROJECTS.length-3); carPos=Math.min(max, Math.max(0, carPos+dir)); car.style.transform=`translateX(-${carPos*232}px)`;}
+
+function openProject(i){const p=PROJECTS[i]; const m=document.getElementById('projModal');
+ m.innerHTML=`<button class="x" onclick="closeModal('projModalBk')">✕</button><div class="cat">${p.cat}</div><h2>${p.ttl}</h2>
+ <div class="panel"><p>${p.desc}</p><div class="techLab">TECHNOLOGIES</div><div class="tags light">${p.tech.map(t=>`<span>${t}</span>`).join('')}</div></div>
+ <h3 style="font-size:16px;margin:20px 0 4px">Links</h3>
+ <a class="linkRow" href="https://www.upwork.com/freelancers/~0187f89a2c82ca8e3c" target="_blank" rel="noopener"><span>💼 See it on my Upwork portfolio</span><span class="arr">→</span></a>
+ <a class="linkRow" href="mailto:shanalikhoso12@gmail.com?subject=${encodeURIComponent('Project like: '+p.ttl)}"><span>✉️ I want something like this</span><span class="arr">→</span></a>`;
+ document.getElementById('projModalBk').style.display='flex';}
+
+function openWelcome(){document.getElementById('welcomeBk').style.display='flex'}
+function closeModal(id){document.getElementById(id).style.display='none'}
+
+function goHome(){document.getElementById('chat').style.display='none'; document.getElementById('bottomBar').style.display='none'; document.getElementById('hero').style.display='block'; window.scrollTo({top:0,behavior:'smooth'});}
+
+function showChat(){document.getElementById('hero').style.display='none'; document.getElementById('chat').style.display='block'; document.getElementById('bottomBar').style.display='block';}
+
+function ask(key, question){
+ showChat();
+ const msgs=document.getElementById('messages');
+ const u=document.createElement('div'); u.className='msg user'; u.innerHTML=`<div class="bubble"></div>`; u.firstChild.textContent=question; msgs.appendChild(u);
+ const tp=document.createElement('div'); tp.className='msg'; tp.innerHTML=`<span class="typing"><i></i><i></i><i></i></span>`; msgs.appendChild(tp);
+ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
+ carPos=0;
+ setTimeout(()=>{tp.remove(); const a=document.createElement('div'); a.className='msg'; a.innerHTML=ANSWERS[key](); msgs.appendChild(a); a.scrollIntoView({behavior:'smooth', block:'start'});}, 850);
+}
+
+function submitAsk(e, inputId){
+ e.preventDefault();
+ const inp=document.getElementById(inputId); const text=inp.value.trim(); if(!text) return false;
+ inp.value='';
+ const key=route(text);
+ if(key){ask(key, text);}
+ else{ showChat(); const msgs=document.getElementById('messages');
+  const u=document.createElement('div'); u.className='msg user'; u.innerHTML=`<div class="bubble"></div>`; u.firstChild.textContent=text; msgs.appendChild(u);
+  const tp=document.createElement('div'); tp.className='msg'; tp.innerHTML=`<span class="typing"><i></i><i></i><i></i></span>`; msgs.appendChild(tp);
+  window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
+  setTimeout(()=>{tp.remove(); const a=document.createElement('div'); a.className='msg'; a.innerHTML=fallbackAnswer(); msgs.appendChild(a); a.scrollIntoView({behavior:'smooth', block:'start'});}, 850);
+ }
+ return false;
+}
+</script>
 </body>
 </html>
